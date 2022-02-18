@@ -1,0 +1,1 @@
+tesseract data/0.jpg stdout
