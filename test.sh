@@ -1,1 +1,1 @@
-tesseract data/0.jpg stdout
+tesseract data/1.jpg stdout
