@@ -9,11 +9,13 @@ def get_info(rawimg):
 
 def get_strings(rawimg):
     oem = 3
-    psm = 6
+    psm = 11
 
     img = Image.fromarray(rawimg)
     text = pytesseract.image_to_string(img, lang='eng')
-    texts = text.split('\n')
+    print(text)
+    texts = text.split('\n')#[0:-1]
+    print(texts)
     return texts
 
 def parse_data(texts):
