@@ -16,6 +16,8 @@ def get_img():
     data  = request.get_data()
     jpg_arr = np.frombuffer(data, dtype=np.uint8)
     img = cv2.imdecode(jpg_arr, cv2.IMREAD_COLOR)
+    if img is None:
+        return jsonify({'id':'INVALID', 'pw':'INVALID'})
     info = get_info(img)    
     print(info)
     return jsonify(info) 
