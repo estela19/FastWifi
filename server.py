@@ -3,9 +3,11 @@ import cv2
 import numpy as np
 from flask import Flask, request, jsonify
 
-from  model import get_info
+from model import get_info
+from configs import SEVER_CONFIGS
 
 app = Flask(__name__)
+server_configs = SEVER_CONFIGS()
 
 @app.route('/')
 def hello():
@@ -23,4 +25,4 @@ def get_img():
     return jsonify(info) 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10301, debug=True)
+    app.run(host=server_configs.ip, port=server_configs.port)
