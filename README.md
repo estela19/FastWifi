@@ -1,5 +1,7 @@
 # FastWifi
-Get wifi ID/PW from wifi information image by OCR. In this repo, ocr server which parsing wifi ID/PW. Now you can parse english only
+Get wifi ID/PW from wifi information image by OCR.  
+In this repo, ocr server which parsing wifi ID/PW.  
+Now you can parse english only
 
 ## Key Feature
 ![struct](https://github.com/estela19/FastWifi/blob/master/utils/structure.png)  
