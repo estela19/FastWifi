@@ -1,7 +1,5 @@
 # FastWifi
-Get wifi ID/PW from wifi information image by OCR  
-In this repo, ocr server which parsing wifi ID/PW  
-now you can parse english only
+Get wifi ID/PW from wifi information image by OCR. In this repo, ocr server which parsing wifi ID/PW. Now you can parse english only
 
 ## Key Feature
 ![struct](https://github.com/estela19/FastWifi/blob/master/utils/structure.png)  
@@ -14,22 +12,22 @@ you can see applications at below related application
 ## Server protocol
 ### client to server
 image data (byte stream)
-### server to clinet
+### server to client
 json format id/pw pair  
-`{'id': 'testwifi', 'pw': 'a12345'}`
+```{'id': 'testwifi', 'pw': 'a12345'}```
 
 if can't found valid id/pw, return INVALID  
-`{'id': 'INVALID', 'pw': 'INVALID'}`
+```{'id': 'INVALID', 'pw': 'INVALID'}```
 
 ## Development info
-* Language : python
+* Language : python 3.8
 * Environment : Linux
 * Library : Flask, pytesseract
 * period : 2022.02.28.
 
 ## Quick Start
 prerequest: conda  
-you should change your server ip & port in server.py
+you should change your server ip & port in configs.py
 ```
 git clone https://github.com/estela19/FastWifi
 cd FastWifi
